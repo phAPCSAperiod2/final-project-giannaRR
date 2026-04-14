@@ -3,10 +3,6 @@ public class Assignment {
     String subject;
     int dueDate;
 
-    public static void main(String[] args) throws Exception {
-
-    }
-
     public Assignment(String name, String subject, int dueDate){
         this.name = name;
         this.subject = subject;
@@ -30,7 +26,7 @@ public class Assignment {
     }
 
     public int daysLeft(int currentDate){
-        
+        return dueDate - currentDate;
     }
 
 }
