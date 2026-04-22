@@ -1,25 +1,19 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-public class Main{
+
+public class Main {
     public static void main(String[] args) throws Exception {
-        Scanner input = new Scanner (System.in);
-        ArrayList<Assignment> assignments = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
 
         System.out.print("Enter assignment name: ");
         String name = input.nextLine();
 
-        System.out.print("Enter subject: ");
+        System.out.print("Enter subject (Math, English, Psychology): ");
         String subject = input.nextLine();
 
-        System.out.print("Enter due date (number): ");
+        System.out.print("Enter due date (April 22 : 4.22): ");
         int dueDate = input.nextInt();
 
-        Assignment a = new Assignment(name, subject, dueDate);
-
-        assignments.add(a);
-
         System.out.println("Stored Assignment:");
-        System.out.println(a);
 
         input.close();
     }
