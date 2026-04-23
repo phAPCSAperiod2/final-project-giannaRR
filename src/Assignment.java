@@ -1,9 +1,9 @@
 public class Assignment {
     String name;
     String subject;
-    int dueDate;
+    double dueDate;
 
-    public Assignment(String name, String subject, int dueDate){
+    public Assignment(String name, String subject, double dueDate){
         this.name = name;
         this.subject = subject;
         this.dueDate = dueDate;
@@ -17,7 +17,7 @@ public class Assignment {
         return subject;
     }
 
-    public int getDate(){
+    public double getDueDate(){
         return dueDate;
     }
 

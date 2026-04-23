@@ -20,7 +20,7 @@ public class AssignmentManager {
 
         String result = " ";
 
-        for (Assignement a: Singleassignments){
+        for (Assignment a: Singleassignments){
             if (a.getSubject().equals(subject)){
                 result += a.toString();
             }
@@ -28,12 +28,13 @@ public class AssignmentManager {
         return result;
     }
 
-    public int findDueDate (String name){
+    public double findDueDate(String name){
 
         for (Assignment a : Singleassignments){
-            if (a.getSubject().equals(name)){
-                return a.getDueDate().
+            if (a.getName().equals(name)){
+                return a.getDueDate();
             }
         }
+        return -1; // in case if assignemnt isnt found
     }
 }
