@@ -8,6 +8,7 @@ public class Main {
         String choice = "yes";
 
         while (choice.equals("yes")){
+            System.out.println(" ");
             System.out.print("Enter assignment name: ");
             String name = input.nextLine();
 
@@ -24,7 +25,7 @@ public class Main {
             System.out.print("Enter another assignment? (yes/no): ");
             choice = input.nextLine();
         }
-
+        manager.printAllAssignments();
         input.close();
     }
 }

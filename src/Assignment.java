@@ -1,7 +1,7 @@
 public class Assignment {
     String name;
-    String subject;
     double dueDate;
+    String subject;
 
     public Assignment(String name, String subject, double dueDate){
         this.name = name;
@@ -26,7 +26,7 @@ public class Assignment {
     }
 
     public int daysLeft(int currentDate){
-        return dueDate - currentDate;
+        return (int)(dueDate - currentDate);
     }
 
 }

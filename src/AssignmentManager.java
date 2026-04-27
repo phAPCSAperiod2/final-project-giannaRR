@@ -35,6 +35,30 @@ public class AssignmentManager {
                 return a.getDueDate();
             }
         }
-        return -1; // in case if assignemnt isnt found
+        return -1;
     }
+
+    public void printAllAssignments() {
+        System.out.println("Name            Subject         Due Date");
+        System.out.println("----------------------------------------");
+
+        for (Assignment a : Singleassignments) {
+            System.out.println(a.getName() + "   |   " + a.getSubject() + "    |    " + a.getDueDate()
+            );
+        }
+    }
+
+    public String[][] getAssignmentsAsTable() {
+        String[][] table = new String[Singleassignments.size()][3];
+
+        for (int i = 0; i < Singleassignments.size(); i++) {
+            Assignment a = Singleassignments.get(i);
+            table[i][0] = a.getName();
+            table[i][1] = a.getSubject();
+            table[i][2] = String.valueOf(a.getDueDate());
+        }
+
+        return table;
+        }
+
 }
