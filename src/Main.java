@@ -25,7 +25,19 @@ public class Main {
             System.out.print("Enter another assignment? (yes/no): ");
             choice = input.nextLine();
         }
-        manager.printAllAssignments();
+
+        System.out.println(" ");
+        System.out.println("Total assignments needed to be completed: " + manager.getTotalAssignments());
+
+        System.out.println(" ");
+        System.out.println("Do you want to know how many assignments you have per subject? (yes/no)");
+        String answer = input.nextLine();
+        if (answer.equals("yes") || answer.equals("Yes")){
+            System.out.println("What subject would you like to check?");
+            String subAnswer = input.nextLine();
+            System.out.println(manager.getAssignmentsBySubject(subAnswer));
+        }
+
         input.close();
     }
 }

@@ -22,7 +22,7 @@ public class AssignmentManager {
 
         for (Assignment a: Singleassignments){
             if (a.getSubject().equals(subject)){
-                result += a.toString();
+                result += a.toString() + " || ";
             }
         }
         return result;
@@ -38,6 +38,7 @@ public class AssignmentManager {
         return -1;
     }
 
+    // test for how I want ouput to look like
     public void printAllAssignments() {
         System.out.println("Name            Subject         Due Date");
         System.out.println("----------------------------------------");
@@ -48,6 +49,7 @@ public class AssignmentManager {
         }
     }
 
+    // actual implementation of 2D array (working)
     public String[][] getAssignmentsAsTable() {
         String[][] table = new String[Singleassignments.size()][3];
 
