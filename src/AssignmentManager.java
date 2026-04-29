@@ -22,7 +22,7 @@ public class AssignmentManager {
 
         for (Assignment a: Singleassignments){
             if (a.getSubject().equals(subject)){
-                result += a.toString() + " || ";
+                result += a.getName() + " - Due: " + a.getDueDate() + " || ";
             }
         }
         return result;
@@ -38,17 +38,6 @@ public class AssignmentManager {
         return -1;
     }
 
-    // test for how I want ouput to look like
-    public void printAllAssignments() {
-        System.out.println("Name            Subject         Due Date");
-        System.out.println("----------------------------------------");
-
-        for (Assignment a : Singleassignments) {
-            System.out.println(a.getName() + "   |   " + a.getSubject() + "    |    " + a.getDueDate()
-            );
-        }
-    }
-
     // actual implementation of 2D array (working)
     public String[][] getAssignmentsAsTable() {
         String[][] table = new String[Singleassignments.size()][3];
@@ -62,5 +51,13 @@ public class AssignmentManager {
 
         return table;
         }
+
+    public void intro(){
+        System.out.println("==================================");
+        System.out.println("🖊️  📖 Assignment Tracker Program ✏️  📚");
+        System.out.println("==================================");
+        System.out.println("This program helps you keep track of your homework.");
+        System.out.println("You will enter assignment name, subject, and due date below.");
+    }
 
 }
