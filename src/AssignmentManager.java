@@ -60,4 +60,14 @@ public class AssignmentManager {
         System.out.println("You will enter assignment name, subject, and due date below.");
     }
 
+    public void removeAssignment(int index){
+        if (index >= 0 && index < Singleassignments.size()) {
+            Singleassignments.remove(index);
+            System.out.println("Assignment completed!");
+        }
+        else {
+        System.out.println("Invalid assignment number.");
+        }
+    }
+
 }
