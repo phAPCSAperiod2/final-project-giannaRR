@@ -28,14 +28,14 @@ public class AssignmentManager {
         return result;
     }
 
-    public double findDueDate(String name){
+    public String findDueDate(String name){
 
         for (Assignment a : Singleassignments){
             if (a.getName().equals(name)){
                 return a.getDueDate();
             }
         }
-        return -1;
+        return " ";
     }
 
     // actual implementation of 2D array (working)

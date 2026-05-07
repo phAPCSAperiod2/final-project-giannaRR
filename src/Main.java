@@ -17,8 +17,8 @@ public class Main {
             System.out.print("Enter subject (Math, English, Psychology): ");
             String subject = input.nextLine();
 
-            System.out.print("Enter due date (April 22 : 4.22): ");
-            double dueDate = input.nextDouble();
+            System.out.print("Enter due date (April 22 = 4/22): ");
+            String dueDate = input.nextLine();
             input.nextLine();
 
             Assignment a = new Assignment(name, subject, dueDate);
@@ -63,7 +63,7 @@ public class Main {
         System.out.println("Did you finish any assignments? (yes/no)");
         String response = input.nextLine();
         while (response.equals("yes")){
-            System.out.println("What assignment did you finish? (please type the assignment number, ex. 1)");
+            System.out.println("What assignment did you finish? (please type the assignment number shown on the table abovestatshomework, ex. 1)");
             int hwDone = input.nextInt();
             input.nextLine();
             manager.removeAssignment(hwDone-1);
