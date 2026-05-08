@@ -1,14 +1,28 @@
 import java.util.Scanner;
 
+/**
+ * Main class for the Assignment Manager program.
+ * This program allows users to add, view, check,
+ * and remove assignments through console input.
+ */
 public class Main {
-    public static void main(String[] args) {
+
+        /**
+        * Runs the Assignment Manager application.
+        *
+        * @param args command-line arguments (not used)
+        */
+        public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         AssignmentManager manager = new AssignmentManager();
 
         manager.intro();
 
         String choice = "yes";
-
+        /**
+         * Repeatedly asks the user to enter assignments
+         * until they choose to stop.
+         */
         while (choice.equals("yes")) {
             System.out.println(" ");
             System.out.print("Enter assignment name: ");
@@ -20,7 +34,7 @@ public class Main {
             System.out.print("Enter due date (April 22 = 4/22): ");
             String dueDate = input.nextLine();
             input.nextLine();
-
+            // Creates and adds a new assignment object to a list
             Assignment a = new Assignment(name, subject, dueDate);
             manager.addAssignment(a);
 
@@ -32,7 +46,7 @@ public class Main {
         System.out.println("Assignments Table:");
 
         String[][] table = manager.getAssignmentsAsTable();
-
+        // Prints the assignments table.
         System.out.println("No.     Name            Subject         Due Date");
         System.out.println("------------------------------------------------");
         for (int i = 0; i < table.length; i++) {
@@ -47,7 +61,10 @@ public class Main {
 
         System.out.println(" ");
         System.out.println("Total assignments needed to be completed: " + manager.getTotalAssignments());
-
+        /**
+         * Allows the user to check how many assignments
+         * belong to a specific subject.
+         */
         System.out.println(" ");
         System.out.println("Do you want to know how many assignments you have per subject? (yes/no)");
         String answer = input.nextLine();
@@ -76,7 +93,7 @@ public class Main {
         System.out.println("NEW Assignments Table:");
 
         String[][] table2 = manager.getAssignmentsAsTable();
-
+        // Prints the assignments table.
         System.out.println("No.     Name            Subject         Due Date");
         System.out.println("------------------------------------------------");
         for (int i = 0; i < table2.length; i++) {
