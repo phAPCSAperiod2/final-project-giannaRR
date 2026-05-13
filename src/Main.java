@@ -31,7 +31,7 @@ public class Main {
             System.out.print("Enter subject (Math, English, Psychology): ");
             String subject = input.nextLine();
 
-            System.out.print("Enter due date (April 22 = 4/22): ");
+            System.out.print("Enter due date (April 22 = 4/22), [press enter again when done]: ");
             String dueDate = input.nextLine();
             input.nextLine();
             // Creates and adds a new assignment object to a list
